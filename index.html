@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <img class="logo" src="img/smartlogo.png" width="250/">
+</header>
+<section class="banner ng-scope">
+    <!--<h1 id="product">Site Mapping</h1>-->
+    <h1 id="product"><a href="http://supporttools.smartadserver.com/">Smart Tools</a> &gt; <a class="selected">Site Mapping</a></h1>
+</section>
+
+<div id="content">
+    <div id="sites" class="left-container">
+        <div class="site-container">
+            <input type="text" class="new-site" id="siteName" name="siteName" placeholder="Enter Site name" value="">
+            <input type="text" class="new-site" id="siteUrl" name="siteUrl" placeholder="Enter Site URL" value="">
+            <select id="iab-category">
+                <option value="default" selected>Select Site IAB category</option>
+				<option value="">Arts & Entertainment</option>
+                <option value="">Automotive</option>
+                <option value="">Business</option>
+                <option value="">Careers</option>
+                <option value="">Education</option>
+                <option value="">Family & Parenting</option>
+                <option value="">Food & Drink</option>
+                <option value="">Health & Fitness</option>
+                <option value="">Hobbies & Interests</option>
+                <option value="">Home & Garden</option>
+                <option value="">Illegal Content</option>
+                <option value="">Law</option>
+                <option value="">News</option>
+                <option value="">Non-Standard Content</option>
+                <option value="">Personal Finance</option>
+                <option value="">Pets</option>
+                <option value="">Real Estate</option>
+                <option value="">Religion & Spirituality</option>
+                <option value="">Science</option>
+                <option value="">Shopping</option>
+                <option value="">Society</option>
+                <option value="">Sports</option>
+                <option value="">Style & Fashion</option>
+                <option value="">Technology & Computing</option>
+                <option value="">Travel</option>
+                <option value="">Uncategorized</option>
+            </select>
+
+        </div>
+        <div id="pages">
+            <h3>Add Pages</h3>
+            <div class="page-container">
+                <input type="text" class="new-page" name="newpage[]" placeholder="Enter Page name">
+
+                <div class="dropped-formats droppable"><span class="msg">Drag and drop Formats from the right column</span></div>
+                <!--<img class="preview-btn" src="img/preview.png">-->
+                <div class="preview-btn fa fa-eye"></div>
+            </div>
+            <input type="button" class="fancy-button small" id="add-page" name="addPage" value="Add New Page">
+        </div>
+        <input type="button" class="fancy-button" id="add-site" name="addSite" value="Submit Site">
+    </div>
+    <div class="right-container">
+    <div id="formats">
+        <h3>Formats</h3>
+
+        <div id="format-list">
+            <div class="format draggable"><span class="format-item">300x250</span></div>
+            <div class="format draggable"><span class="format-item">728x90</span></div>
+            <div class="format draggable"><span class="format-item">300x600</span></div>
+            <div class="format draggable"><span class="format-item">160x600</span></div>
+            <div class="format draggable"><span class="format-item">Instream-Video</span></div>
+        </div>
+        <!--<input type="text" class="new-format" id="new-format" name="newFormat" placeholder="Add Custom Format">-->
+        <h3>Add Custom Format</h3>
+        <input type="text" class="new-format" id="cf-width" name="cfWidth" placeholder="Width">
+        <input type="text" class="new-format" id="cf-height" name="cfHeight" placeholder="Height">
+        <input type="button" class="fancy-button small" id="add-format" name="addFormat" value="Add Format">
+    </div>
+    <div id="submitted-sites" style="display: none;">
+        <h3>Submitted Sites</h3>
+        <div id="ss-list">
+            <!--<div class="ss-container">-->
+                <!--<div class="ss-name"><span class="s-name">Site1</span><span class="s-url">www.test.com</span></div>-->
+                <!--<div class="ss-page">-->
+                    <!--<div class="p-name">page1</div>-->
+                    <!--<div class="p-formats-c">-->
+                        <!--<span class="p-format">300x250</span>-->
+                        <!--<span class="p-format">780x90</span>-->
+                        <!--<span class="p-format">160x600</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="ss-page">-->
+                    <!--<div class="p-name">page1</div>-->
+                    <!--<div class="p-formats-c">-->
+                        <!--<span class="p-format">300x250</span>-->
+                        <!--<span class="p-format">780x90</span>-->
+                        <!--<span class="p-format">160x600</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        </div>
+    </div>
+    </div>
+    <div class="err-box" id="err-box">
+        <h3>Check Errors</h3>
+        <div class="err-close fa fa-window-close" id="err-close"></div>
+    </div>
+
+</div>
+<div id="table-container">
+
+
+
+    <!--<a href="table2csv.zip" download="table2csv.zip"><button>table2csv.zip</button></a>-->
+<table id="site-list" border><caption class="btn-toolbar bottom"></caption></table>
+    <input type="button" id="delete-data" value="Delete All Sites Data" class="fancy-button">
+
+</div>
+<!--<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script type="text/javascript" src="assets/table/xlsx.core.js"></script>
+<script type="text/javascript" src="assets/table/Blob.js"></script>
+<script type="text/javascript" src="assets/table/FileSaver.js"></script>
+<script type="text/javascript" src="assets/table/Export2Excel.js"></script>
+<script type="text/javascript" src="assets/table/jquery.table2csv.min.js"></script>
+<script type="text/javascript" src="assets/table/jquery.tableexport.v2.js"></script>
+<script type="text/javascript" src="assets/main.js"></script>
+
+</body>
+</html>

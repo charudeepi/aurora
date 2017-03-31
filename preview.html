@@ -1,0 +1,478 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="http://gallery.smartadserver.com/demo_web/style/style.css" />
+    <link rel="icon" type="image/x-icon" href="http://smartadserver.com/images/favicon.ico" />
+    <link rel="canonical" href="/background-web-ad-format"  />
+    <title>Background - Rich Media ad format - Smart AdServer gallery</title>
+
+    <style>
+        #ad_728x90{
+            height: 90px;
+            width: 728px;
+            margin: 0 auto;
+            background-color: #fcd1eb;
+            display: none;
+        }
+        #ad_300x250{
+            height: 250px;
+            width: 300px;
+            background-color: #bafcef;
+            display: none;
+        }
+        #ad_160x600{
+            height: 600px;
+            width: 160px;
+            background-color: #eae5ab;
+            display: none;
+        }
+        #ad_300x600{
+            height: 600px;
+            width: 300px;
+            background-color: #a5e29c;
+            display: none;
+        }
+        .bloc1 {
+            /*width:695px;*/
+            width: 97%;
+            height:247px;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/diagonal-noise.png');
+            background-color:#CECECE;
+            margin-right:5px;
+            border-radius:6px;
+            text-align:center;
+            font-size:30px;
+            font-weight:bold;
+            color:red;
+        }
+        #ad_Instream-Video{
+            width: 360px;
+            height: 240px;
+            background-color: #000000;
+            display: none;
+        }
+        #ad_Instream-Video .right-arrow{
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 36px solid white;
+            margin-top: 100px;
+            display: block;
+            position: absolute;
+            margin-left: 163px;
+        }
+
+        .bloc2 {
+            width:660px;
+            height:10px;
+            background-color:#F7E269;
+            margin-bottom:5px;
+        }
+
+        .bloc3 {
+            width:330px;
+            height:10px;
+            background-color:#F7E269;
+            margin-bottom:5px;
+        }
+
+        .bloc4 {
+            /*width:245px;*/
+            width:100%;
+            height:10px;
+            background-color:#EFEFEF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/billie_holiday.png');
+            margin-bottom:5px;
+            margin-right:5px;
+            border-radius:2px;
+        }
+
+        .bloc5 {
+            width:125px;
+            height:10px;
+            background-color:#EFEFEF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/billie_holiday.png');
+            margin-bottom:5px;
+            border-radius:2px;
+        }
+
+        .bloc6 {
+            width:245px;
+            height:300px;
+            background-color:#AFAFAF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/white_carbonfiber.png');
+            margin-bottom:5px;
+            margin-right:5px;
+            border-radius:6px;
+        }
+
+        .bloc7 {
+            /*width:245px;*/
+            width: 100%;
+            height:50px;
+            background-color:#AFAFAF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/white_carbonfiber.png');
+            margin-bottom:5px;
+            margin-right:5px;
+            border-radius:3px;
+        }
+
+        #col1_bloc3 {
+            width:245px;
+            height:60px;
+            background-color:#AFAFAF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/white_carbonfiber.png');
+            margin-bottom:5px;
+            margin-right:5px;
+            border-radius:3px;
+        }
+
+        .bloc8 {
+            /*width:695px;*/
+            width:97%;
+            height:10px;
+            background-color:#EFEFEF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/billie_holiday.png');
+            margin-bottom:5px;
+            margin-right:5px;
+            border-radius:2px;
+        }
+
+        .bloc9 {
+            width:200px;
+            height:10px;
+            background-color:#EFEFEF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/billie_holiday.png');
+            margin-bottom:5px;
+            border-radius:2px;
+        }
+
+        .bloc10 {
+            width:300px;
+            height:260px;
+            background-color:#AFAFAF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/white_carbonfiber.png');
+            margin-bottom:5px;
+            border-radius:6px;
+        }
+
+        .bloc10_bis {
+            width:300px;
+            height:30px;
+            background-color:#AFAFAF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/white_carbonfiber.png');
+            margin-bottom:5px;
+            border-radius:3px;
+        }
+
+        .bloc11 {
+            width:300px;
+            height:10px;
+            background-color:#EFEFEF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/billie_holiday.png');
+            margin-bottom:5px;
+            border-radius:2px;
+        }
+
+        .bloc12 {
+            width:150px;
+            height:10px;
+            background-color:#EFEFEF;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/billie_holiday.png');
+            margin-bottom:5px;
+            border-radius:2px;
+        }
+
+        #texte {
+            font: 30px "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+            color:#7F7F7F;
+            border-bottom:1px solid #7F7F7F;
+        }
+
+        #slider {
+            width:100%;
+            height:59px;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/diagonal-noise.png');
+            background-color:#CECECE;
+            margin-bottom:10px;
+            border-radius:6px;
+        }
+
+        #description {
+            font-family: "tahoma";
+            font-size:14px;
+            text-align:justify;
+            color:#9E9E9E;
+        }
+
+        textarea {
+            resize: none;
+            width:695px;
+            height:335px;
+            background-image: url('http://gallery.smartadserver.com/demo_web/image/diagonal-noise.png');
+            background-color:#CECECE;
+            margin-right:5px;
+            border-radius:6px;
+            border: none;
+            color:grey;
+        }
+
+        h1{margin-left: 256px;
+            padding-top: 30px;}
+        .ad-size{
+            text-align: center;
+            padding-top: 4%;
+            font-size:20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div style="width:100%;margin: 0 auto;text-align:center;">
+    <div style="width:90%; display:block;margin:0 auto;border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;background-color:#fcfcfc">
+
+        <div id="content_container">
+
+            <div id="ad_728x90"><div class="ad-size">780x90</div></div>
+
+            <div id="header">
+                <div id="logo">&nbsp;</div>
+                <h1> Preview Page</h1>
+
+            </div>
+            <br>
+            <div id="slider"></div>
+
+            <table style="width:100%;">
+                <tr>
+
+                    <td valign="top" style="width: 75%;" id="first_td">
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc9"></div><br>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div><br>
+
+                        <!--start smart tag-->
+                        <div id="videoread"></div>
+                        <div id="background"></div>
+
+                        <!--end smart tag-->
+
+
+
+                        <br>
+
+                        <div class="bloc1">
+                        </div><br>
+
+
+
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc9"></div>
+
+                        <br>
+                        <br><br>
+
+
+
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc9"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+
+
+
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div><br>
+
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc9"></div>
+                        <div class="bloc8"></div><br>
+
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc9"></div>
+                        <div class="bloc8"></div><br>
+
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc9"></div>
+                        <div class="bloc8"></div><br>
+
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc9"></div>
+                        <div class="bloc8"></div><br>
+
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc8"></div>
+                        <div class="bloc9"></div>
+
+
+                    </td>
+
+                    <td>&nbsp;  </td>
+
+                    <td valign="top" id="second_td" style="width:25%">
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div>
+                        <!--<div class="bloc6"></div><br>-->
+                        <div id="ad_300x250"><div class="ad-size">300x250</div></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc5"></div>
+                        <div class="bloc4"></div><br>
+                        <div class="bloc7"></div>
+                        <div class="bloc4"></div>
+                        <div id="ad_Instream-Video"><div class="right-arrow"></div></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div><br>
+                        <div class="bloc5"></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div><br>
+                        <!--<div id="col1_bloc3"></div>-->
+                        <div id="ad_300x600"><div class="ad-size">300x600</div></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div>
+                        <div id="ad_160x600"><div class="ad-size">160x600</div></div><br>
+                        <div class="bloc4"></div>
+                        <div class="bloc4"></div>
+                        <div class="bloc5"></div>
+                        <div class="bloc4"></div><br>
+                        <div class="bloc7"></div>
+                        <div class="bloc4"></div>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+        </div>
+        <div style="width:100%;height:45px;text-align:center;border-top:1px solid #dcdcdc;color:#8c8c8c;"><br>Copyright&copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> Smart AdServer
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<!--http://localhost:63342/aurora/preview.html?demoformats.html#ad=1,2,3,4,5#customad=30x40,20x10,30x30-->
+<script>
+    var allVars = window.location.hash.substr(1).split('_'),
+            randColor = ["#DFB0FF","#A8CFFF","#FFE699","#FFC8C8"];
+    console.log(allVars);
+
+    for(var i=0 ; i < allVars.length; i++) {
+
+        if ($("#ad_" + allVars[i]).length) {
+            console.log($("#ad_" + allVars[i]));
+            $("#ad_" + allVars[i]).show();
+        } else {
+            var newAd = $("<div>"),
+                    adFormat = $("<div>"),
+            adArr = allVars[i].split("x"),
+                    rand = randColor[Math.floor(Math.random() * randColor.length)];
+            adFormat
+                    .attr("class","ad-size")
+                    .text(allVars[i])
+                    .appendTo(newAd);
+            newAd.css({
+                width: adArr[0] + "px",
+                height: adArr[1] + "px",
+                backgroundColor: rand
+            });
+
+            if (parseInt(adArr[0]) > 300) {
+                console.log("is greater than 300");
+                newAd.prependTo("#first_td");
+            } else {
+                console.log("is less than 300");
+                newAd.appendTo("#second_td");
+
+            }
+
+        }
+    }
+
+
+</script>
+</body>
+</html>
